@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7u4x3y34nqfg"]
+
+[ext_resource type="Texture2D" uid="uid://dfhn5j5x3y8no" path="res://Assets/Guitarist.png" id="1_60nku"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7635a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u72oa"]
+atlas = ExtResource("1_60nku")
+region = Rect2(0, 0, 1080, 1440)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77lva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u72oa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_7635a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(317, 211)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_77lva")
+animation = &"idle"
