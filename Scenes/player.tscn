@@ -95,4 +95,4 @@ script = ExtResource("1_7635a")
 position = Vector2(317, 211)
 sprite_frames = SubResource("SpriteFrames_77lva")
 animation = &"walking"
-frame_progress = 0.443188
+frame_progress = 0.561441
