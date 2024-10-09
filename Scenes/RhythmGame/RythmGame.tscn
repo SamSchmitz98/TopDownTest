@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci40uopd6j3nm"]
+
+[ext_resource type="PackedScene" uid="uid://bhgfef1jum407" path="res://Scenes/RhythmGame/RhythmCorner/RhythmCorner.tscn" id="1_1gdsl"]
+
+[node name="RythmGame" type="Node2D"]
+
+[node name="Left" parent="." instance=ExtResource("1_1gdsl")]
+position = Vector2(-32, 0)
+rotation = -1.5708
+keyPress = "RhythmLeft"
+color = Color(0, 1, 0.0823529, 1)
+
+[node name="Top" parent="." instance=ExtResource("1_1gdsl")]
+position = Vector2(0, -32)
+keyPress = "RhythmUp"
+color = Color(1, 0, 0, 1)
+
+[node name="Right" parent="." instance=ExtResource("1_1gdsl")]
+position = Vector2(32, 0)
+rotation = 1.5708
+keyPress = "RhythmRight"
+color = Color(0, 0.482353, 1, 1)
+
+[node name="Bottom" parent="." instance=ExtResource("1_1gdsl")]
+position = Vector2(0, 32)
+rotation = -3.14159
+keyPress = "RhythmDown"
+color = Color(0.890196, 1, 0.14902, 1)

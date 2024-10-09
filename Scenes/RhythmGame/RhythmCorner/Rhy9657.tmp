@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhgfef1jum407"]
+
+[ext_resource type="Texture2D" uid="uid://djxxy34gv6tut" path="res://Assets/RhythmCorner.png" id="1_rtk2l"]
+[ext_resource type="Shader" path="res://Scenes/RhythmGame/RhythmCorner/RhythmCorner.gdshader" id="1_va218"]
+[ext_resource type="Script" path="res://Scenes/RhythmGame/RhythmCorner/rhythm_corner.gd" id="2_43d4f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gqls4"]
+shader = ExtResource("1_va218")
+shader_parameter/custom_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ixjjy"]
+shader = ExtResource("1_va218")
+shader_parameter/custom_color = null
+
+[node name="RhythmCorner" type="Node2D"]
+material = SubResource("ShaderMaterial_gqls4")
+script = ExtResource("2_43d4f")
+color = Color(1, 0.298039, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ixjjy")
+texture = ExtResource("1_rtk2l")

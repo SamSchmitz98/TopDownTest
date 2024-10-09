@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch3djk2kx71su"]
+
+[ext_resource type="PackedScene" uid="uid://ci40uopd6j3nm" path="res://Scenes/RhythmGame/RythmGame.tscn" id="1_1bjf6"]
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="RythmGame" parent="." instance=ExtResource("1_1bjf6")]
+position = Vector2(276, 139)
