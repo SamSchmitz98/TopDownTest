@@ -1,0 +1,100 @@
+[gd_scene load_steps=15 format=3 uid="uid://dpqcmixstkn8y"]
+
+[ext_resource type="Script" path="res://Scenes/RhythmGame/RhythmCorner/RhythmBeat/animated_beat_instance.gd" id="1_8coml"]
+[ext_resource type="Texture2D" uid="uid://p0yybmwv5ea" path="res://Assets/BeatSpriteSheet.png" id="1_mxgme"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bhx6"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y38as"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frs7k"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xci0p"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpinw"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0exr"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m05fj"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyifq"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4lfd"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0wet"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w65f3"]
+atlas = ExtResource("1_mxgme")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpxfw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bhx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y38as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frs7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xci0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpinw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0exr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m05fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyifq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4lfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0wet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w65f3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RhythmBeat" type="Node2D"]
+
+[node name="AnimatedBeatInstance" type="Node2D" parent="."]
+script = ExtResource("1_8coml")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedBeatInstance"]
+sprite_frames = SubResource("SpriteFrames_vpxfw")
+frame = 10
+frame_progress = 1.0
+speed_scale = 2.0

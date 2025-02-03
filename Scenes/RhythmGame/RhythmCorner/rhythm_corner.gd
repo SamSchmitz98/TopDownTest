@@ -1,4 +1,6 @@
 extends Node2D
+@onready var spawn_timer = $Timer
+@export var sprite_scene: PackedScene  # Assign your AnimatedSpriteInstance.tscn in the editor
 @export var keyPress: String
 @export var color: Color = Color.WHITE:
 	set(value):
@@ -24,6 +26,7 @@ func update_shader_color():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_shader_color()
+	spawn_timer.timeout.connect(spawn_sprite)
 	pass # Replace with function body.
 
 
@@ -37,3 +40,8 @@ func _input(event):
 	else:
 		cur_color = color
 	pass
+	
+func spawn_sprite():
+	var sprite = $Sprite2D
+	var instance = sprite_scene.instantiate()
+	add_child(instance)# Randomize position
